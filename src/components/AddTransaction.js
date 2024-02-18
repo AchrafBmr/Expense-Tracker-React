@@ -17,6 +17,9 @@ export default function AddTransaction() {
         amount : +amount
       }
 
+      setAmount("");
+      setText("");
+
       addTransactions(newTransactions);
     }
 
