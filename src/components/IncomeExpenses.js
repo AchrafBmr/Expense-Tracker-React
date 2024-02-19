@@ -6,15 +6,11 @@ export default function IncomeExpenses() {
 
   const amounts = transactions.map(transactions => transactions.amount);
 
-  const income = amounts
-    .filter(item => item > 0)
-    .reduce((acc, item) => (acc += item), 0)
-    .toFixed(2);
+  //for calcul income
+  const income = amounts.filter(item => item > 0).reduce((acc, item) => (acc += item), 0).toFixed(2);
 
-  const expense = (
-    amounts.filter(item => item < 0).reduce((acc, item) => (acc += item), 0) *
-    -1
-  ).toFixed(2);
+  //for calcul expense
+  const expense = (amounts.filter(item => item < 0).reduce((acc, item) => (acc += item), 0) *-1).toFixed(2);
 
 
   return (
