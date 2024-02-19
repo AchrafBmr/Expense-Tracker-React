@@ -8,6 +8,7 @@ export default function AddTransaction() {
     const [text , setText] = useState('')
     const [amount , setAmount] = useState('')
 
+  //this function for added new transactions
     const onSubmit = e => {
       e.preventDefault();
 
